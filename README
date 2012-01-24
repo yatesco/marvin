@@ -1,0 +1,24 @@
+Marvin is an idea for building highly scalable systems with very low overhead.  Low overhead in terms of building blocks, programmer complexity and runtime efficiency - it should be simple to understand, build, extend and maintain.
+
+The end result will be some architectural blueprints, some supporting libraries and a deployable set of code to demonstrate this.
+
+This all stems from my frustration that Java applications are either single-WAR single-threaded beasts (with lots of supporting libraries), highly complex replicated-single-WAR beasts (with even more supporting libraries) or fully distributed applications with *even more* supporting libraries.  I can see a way of getting the benefits of a fully distributed architecture without the pain of huge complex "enterprise" toolkits.  
+
+Marvin will make building and managing distributed apps as simple as single-WAR files.  Marvin will *not* hide the building blocks from you (as this never works and leads to leaky abstractions), but it will provide gloves that allow you to use those building blocks without getting cut.
+
+* Why not Mule, Camel, Spring Integration, ESB_X, Erlang, Akka, OSGi etc.?
+Because they are all too heavy weight *and* they all tie you into a single technology.  Marvin will allow you to plug discrete blocks together regardless of what those blocks are built with.
+
+* So this is like Service Oriented Architecture or Messaging Oriented Architecture?
+Similar yes, however all of the ones I have looked at just seem to heavy weight.  Far too heavy weight.  If you need a GUI builder and MBs of downloads then I think it might be a bit too much.
+
+* Technologies and process
+The point is that users of Marvin should be free to use whichever technology they want.  Supporting libraries are most likely to be written on the JVM:
+ - Clojure
+ - Scala
+ - Java
+ - maybe even Groovy
+
+Marvin fully embraces, enjoys and employs CQRS and Event Sourcing.
+
+Or not - I never seem to get time to do these things anymore :(
